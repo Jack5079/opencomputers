@@ -19,9 +19,7 @@ layout:addChild(GUI.text(1, 1, 0xFFFFFF, "Click the button to nuke computer"))
 local regularButton = layout:addChild(GUI.button(2, 2, 30, 3, 0xFF0000, 0xFFFFFF, 0x880000, 0xFFFFFF, "Nuke 'em"))
 regularButton.onTouch = function()
 local deader = filesystem.list("/")
-local y = 3
 for key,value in pairs(deader) do
-layout:addChild(GUI.text(1, y, 0x4B4B4B, "Deleting " .. value .. "..."))
 filesystem.remove(value)
 end
 end
