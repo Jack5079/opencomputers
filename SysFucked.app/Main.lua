@@ -7,7 +7,7 @@ local filesystem = require("Filesystem")
 ---------------------------------------------------------------------------------
 
 -- Add a new window to MineOS workspace
-local workspace, window, menu = system.addWindow(GUI.filledWindow(1, 1, 60, 20, 0x000000))
+local workspace, window, menu = system.addWindow(GUI.filledWindow(1, 1, 60, 20, 0x454545))
 
 
 
