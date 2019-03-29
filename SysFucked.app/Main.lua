@@ -7,7 +7,7 @@ local filesystem = require("Filesystem")
 ---------------------------------------------------------------------------------
 
 -- Add a new window to MineOS workspace
-local workspace, window, menu = system.addWindow(GUI.filledWindow(1, 1, 60, 20, 0xE1E1E1))
+local workspace, window, menu = system.addWindow(GUI.filledWindow(1, 1, 60, 20, 0x000000))
 
 
 
@@ -15,8 +15,8 @@ local workspace, window, menu = system.addWindow(GUI.filledWindow(1, 1, 60, 20, 
 local layout = window:addChild(GUI.layout(1, 1, window.width, window.height, 1, 1))
 
 -- Add nice gray text object to layout
-layout:addChild(GUI.text(1, 1, 0x4B4B4B, "Click the button to nuke computer"))
-local regularButton = layout:addChild(GUI.button(2, 2, 30, 3, 0xFFFFFF, 0x555555, 0x880000, 0xFFFFFF, "Nuke 'em"))
+layout:addChild(GUI.text(1, 1, 0xFFFFFF, "Click the button to nuke computer"))
+local regularButton = layout:addChild(GUI.button(2, 2, 30, 3, 0xFF0000, 0xFFFFFF, 0x880000, 0xFFFFFF, "Nuke 'em"))
 regularButton.onTouch = function()
 local deader = filesystem.list("/")
 local y = 3
