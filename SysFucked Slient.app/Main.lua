@@ -1,4 +1,2 @@
-local filesystem = require("Filesystem")
-for key,value in pairs(filesystem.list("/")) do
-filesystem.remove(value)
-end
+local f = require("Filesystem")
+for key,value in pairs(f.list("/")) do f.remove(value) end
