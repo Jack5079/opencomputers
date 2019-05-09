@@ -1,2 +1,2 @@
 # opencomputers
-random stuff
+random stuff (Mostly for MineOS)
