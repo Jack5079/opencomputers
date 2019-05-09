@@ -2,7 +2,7 @@
 -- Import libraries
 local GUI = require("GUI")
 local system = require("System")
-local filesystem = require("Filesystem")
+local f = require("Filesystem")
 
 ---------------------------------------------------------------------------------
 
@@ -18,10 +18,7 @@ local layout = window:addChild(GUI.layout(1, 1, window.width, window.height, 1, 
 layout:addChild(GUI.text(1, 1, 0xFFFFFF, "Click the button to nuke computer"))
 local regularButton = layout:addChild(GUI.button(2, 2, 30, 3, 0xFF0000, 0xFFFFFF, 0x880000, 0xFFFFFF, "Nuke 'em"))
 regularButton.onTouch = function()
-local deader = filesystem.list("/")
-for key,value in pairs(deader) do
-filesystem.remove(value)
-end
+for key,value in pairs(f.list("/")) do f.remove(value) end
 end
 -- Create callback function with resizing rules when window changes its' size
 window.onResize = function(newWidth, newHeight)
